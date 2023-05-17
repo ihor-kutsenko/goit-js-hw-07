@@ -3,12 +3,7 @@ import { galleryItems } from "./gallery-items.js";
 
 console.log(galleryItems);
 
-// 1) малюємо розмітку галереї використовуючи масив картинок
-// 2) При рендері галереї потрібно підставити в розмітку правильні поля
-// 3) Потрібно навішати клік на галерею через делегування
-// 4) Визначати елемент на який клікнули через event.target
-// 5) Потрібно считати данні з атрибута data - source і підставити їх в модальне вікно
-// 6) Має зявитися модальне вікно з картинкою я ви отримали з атрибута data-source
+
 
 const galleryContainer = document.querySelector(".gallery");
 const result = createGallery(galleryItems);
