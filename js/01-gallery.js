@@ -55,11 +55,15 @@ function onGalleryPhotoClick(event) {
     <img src="${event.target.dataset.source}" width="800" height="600">
 `,
     {
-      onShow: () => window.addEventListener("keydown", onPressKeyEscape),
-      onClose: () => window.removeEventListener("keydown", onPressKeyEscape),
+      onShow: (modal) => { window.addEventListener("keydown", onPressKeyEscape) },
+      onClose: (modal) => { window.removeEventListener("keydown", onPressKeyEscape) },
     }
   );
-  modal.show();
+
+  if (event.target.nodeName === 'IMG') {
+    modal.show();
+  }
+  
 
   function onPressKeyEscape(event) {
     if (event.code === "Escape") {
